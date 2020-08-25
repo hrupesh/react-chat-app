@@ -14,7 +14,7 @@ const typeDefs = `
     }
 
     type Mutation{
-        postMessage(user: String!, constent: String!): ID!
+        postMessage(user: String!, content: String!): ID!
     }
 `;
 
