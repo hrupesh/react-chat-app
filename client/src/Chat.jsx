@@ -46,7 +46,7 @@ const Messages = ({ user }) => {
               color: user === messageUser ? "white" : "black",
               letterSpacing: 2,
               fontWeight: "400",
-              padding: "1em",
+              padding: "1em 1.5em",
               borderRadius: "1em",
               maxWidth: "60%",
               boxShadow: "inset 0px 0 8px 0px #0000002b",
