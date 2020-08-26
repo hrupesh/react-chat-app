@@ -39,6 +39,21 @@ const Messages = ({ user }) => {
             paddingBottom: "0.5em",
           }}
         >
+          {user !== messageUser && (
+            <div
+              style={{
+                height: 50,
+                width: 50,
+                marginRight: "0.5em",
+                border: "2px solid #e5e6ea",
+                borderRadius: 25,
+                textAlign: "center",
+                padding: "0.5em",
+              }}
+            >
+              {messageUser.slice(0, 2).toUpperCase()}
+            </div>
+          )}
           <div
             style={{
               background: user === messageUser ? "#512DF8" : "#e5e6ea",
@@ -62,7 +77,7 @@ const Messages = ({ user }) => {
 
 const Chat = () => {
   return (
-    <Container className="mt-4" >
+    <Container className="mt-4">
       <Messages user="Rupesh" />
     </Container>
   );
