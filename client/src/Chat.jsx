@@ -42,13 +42,14 @@ const Messages = ({ user }) => {
         >
           <div
             style={{
-              background: user === messageUser ? "#512DA8" : "#e5e6ea",
+              background: user === messageUser ? "#512DF8" : "#e5e6ea",
               color: user === messageUser ? "white" : "black",
               letterSpacing: 2,
               fontWeight: "500",
               padding: "1em",
               borderRadius: "1em",
               maxWidth: "60%",
+            //   boxShadow: "-26px -26px 63px #4596c5, 26px 26px 63px #65dcff",
             }}
           >
             {content}
