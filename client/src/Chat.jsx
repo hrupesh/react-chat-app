@@ -25,13 +25,15 @@ const GET_MESSAGES = gql`
 `;
 
 const POST_MESSAGE = gql`
-  mutation {
+  mutation($user: String!, $content: String!) {
     postMessage(user: $user, content: $content)
   }
 `;
 
 const Messages = ({ user }) => {
-  const { data } = useQuery(GET_MESSAGES);
+  const { data } = useQuery(GET_MESSAGES, {
+    pollInterval: 500,
+  });
   if (!data) {
     return null;
   }
@@ -90,8 +92,12 @@ const Chat = () => {
     user: "Rupesh",
     content: "",
   });
+  const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
     if (state.content.length > 0) {
+      postMessage({
+        variables: state,
+      });
     }
     stateSet({
       ...state,
