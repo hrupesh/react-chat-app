@@ -7,11 +7,6 @@ import "shards-ui/dist/css/shards.min.css";
 import "./index.css";
 import Chat from "./Chat";
 
-const App = () => (
-  <>
-    <h1>Hey!</h1>
-    <Chat />
-  </>
-);
+const App = () => <Chat />;
 
 ReactDOM.render(<App />, document.getElementById("app"));
