@@ -131,8 +131,18 @@ const Chat = () => {
             }}
           />
         </Col>
-        <Col xs={2} style={{ padding: 0 }}>
-          <Button pill theme="info" onClick={() => onSend()}>
+        <Col
+          xs={2}
+          style={{
+            padding: 0,
+          }}
+        >
+          <Button
+            pill
+            block
+            style={{ backgroundColor: "512DF8", border: 0 }}
+            onClick={() => onSend()}
+          >
             Send ➡
           </Button>
         </Col>
