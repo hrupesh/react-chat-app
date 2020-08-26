@@ -49,7 +49,8 @@ const Messages = ({ user }) => {
               padding: "1em",
               borderRadius: "1em",
               maxWidth: "60%",
-            //   boxShadow: "-26px -26px 63px #4596c5, 26px 26px 63px #65dcff",
+              boxShadow: "inset 0px 0 8px 0px #0000002b",
+              //   boxShadow: "-26px -26px 63px #4596c5, 26px 26px 63px #65dcff",
             }}
           >
             {content}
