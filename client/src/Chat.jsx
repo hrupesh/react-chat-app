@@ -7,13 +7,11 @@ const client = new ApolloClient({
 });
 
 const Chat = () => {
-  return (
-  <div>This is a chat window</div>
-  )
+  return <h6>This is a chat window</h6>;
 };
 
-export default () => {
+export default () => (
   <ApolloProvider client={client}>
     <Chat />
-  </ApolloProvider>;
-};
+  </ApolloProvider>
+);
