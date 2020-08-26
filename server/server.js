@@ -40,13 +40,18 @@ const resolvers = {
   },
   Subscription: {
     messages: {
-      subscribe: (parent, args, { pubsub }) => {},
+      subscribe: (parent, args, { pubsub }) => {
+        const channel = Math.random().toString(36).slice(2, 15);
+        console.log(channel);
+      },
     },
   },
 };
 
 const pubsub = new PubSub();
 
+const channel = Math.random().toString(36).slice(2, 15);
+console.log(channel);
 const server = new GraphQLServer({ typeDefs, resolvers, context: { pubsub } });
 server.start(({ port }) => {
   console.log(`Serving on  http://localhost:${port}/`);
