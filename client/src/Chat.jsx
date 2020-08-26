@@ -45,7 +45,7 @@ const Messages = ({ user }) => {
               background: user === messageUser ? "#512DF8" : "#e5e6ea",
               color: user === messageUser ? "white" : "black",
               letterSpacing: 2,
-              fontWeight: "500",
+              fontWeight: "400",
               padding: "1em",
               borderRadius: "1em",
               maxWidth: "60%",
