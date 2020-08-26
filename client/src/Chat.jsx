@@ -36,8 +36,7 @@ const Messages = ({ user }) => {
           style={{
             display: "flex",
             justifyContent: user === messageUser ? "flex-end" : "flex-start",
-            padding: "0.5rem",
-            paddingBottom: "1em",
+            paddingBottom: "0em",
           }}
         >
           <div
@@ -63,7 +62,7 @@ const Messages = ({ user }) => {
 
 const Chat = () => {
   return (
-    <Container>
+    <Container className="mt-4" >
       <Messages user="Rupesh" />
     </Container>
   );
