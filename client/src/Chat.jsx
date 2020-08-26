@@ -6,7 +6,7 @@ import {
   useQuery,
   gql,
 } from "@apollo/client";
-import { Container } from "shards-react";
+import { Container, Col, Row, FormInput, Button } from "shards-react";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/",
