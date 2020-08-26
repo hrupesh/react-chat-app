@@ -3,7 +3,7 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
+  useSubscription,
   useMutation,
   gql,
 } from "@apollo/client";
@@ -24,7 +24,7 @@ const client = new ApolloClient({
 });
 
 const GET_MESSAGES = gql`
-  query {
+  subscription {
     messages {
       id
       user
@@ -40,9 +40,7 @@ const POST_MESSAGE = gql`
 `;
 
 const Messages = ({ user }) => {
-  const { data } = useQuery(GET_MESSAGES, {
-    pollInterval: 500,
-  });
+  const { data } = useSubscription(GET_MESSAGES);
   if (!data) {
     return null;
   }
