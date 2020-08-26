@@ -79,9 +79,27 @@ const Messages = ({ user }) => {
 };
 
 const Chat = () => {
+  const [state, stateSet] = React.useState({
+    user: "Rupesh",
+    content: "",
+  });
   return (
-    <Container className="mt-4">
-      <Messages user="Rupesh" />
+    <Container className="mt-4 pb-4">
+      <Messages user={state.user} />
+      <Row className="px-4">
+        <Col xs={2} style={{ padding: 0 }}>
+          <FormInput
+            label="User"
+            value={state.user}
+            onChange={(e) =>
+              stateSet({
+                ...state,
+                user: e.target.value,
+              })
+            }
+          />
+        </Col>
+      </Row>
     </Container>
   );
 };
