@@ -47,7 +47,7 @@ const resolvers = {
 
 const pubsub = new PubSub();
 
-const server = new GraphQLServer({ typeDefs, resolvers });
+const server = new GraphQLServer({ typeDefs, resolvers, context: { pubsub } });
 server.start(({ port }) => {
   console.log(`Serving on  http://localhost:${port}/`);
 });
