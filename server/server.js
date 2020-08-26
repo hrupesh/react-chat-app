@@ -1,4 +1,4 @@
-const { GraphQLServer } = require("graphql-yoga");
+const { GraphQLServer, PubSub } = require("graphql-yoga");
 
 const messages = [];
 
@@ -16,6 +16,11 @@ const typeDefs = `
     type Mutation{
         postMessage(user: String!, content: String!): ID!
     }
+
+    type Subscription{
+      messages: [Message!]
+    }
+
 `;
 
 const resolvers = {
@@ -33,7 +38,14 @@ const resolvers = {
       return id;
     },
   },
+  Subscription: {
+    messages: {
+      subscribe: (parent, args, { pubsub }) => {},
+    },
+  },
 };
+
+const pubsub = new PubSub();
 
 const server = new GraphQLServer({ typeDefs, resolvers });
 server.start(({ port }) => {
