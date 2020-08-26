@@ -4,6 +4,7 @@ import {
   InMemoryCache,
   ApolloProvider,
   useQuery,
+  useMutation,
   gql,
 } from "@apollo/client";
 import { Container, Col, Row, FormInput, Button } from "shards-react";
@@ -20,6 +21,12 @@ const GET_MESSAGES = gql`
       user
       content
     }
+  }
+`;
+
+const POST_MESSAGE = gql`
+  mutation {
+    postMessage(user: $user, content: $content)
   }
 `;
 
@@ -83,6 +90,14 @@ const Chat = () => {
     user: "Rupesh",
     content: "",
   });
+  const onSend = () => {
+    if (state.content.length > 0) {
+    }
+    stateSet({
+      ...state,
+      content: "",
+    });
+  };
   return (
     <Container className="mt-4 pb-4">
       <Messages user={state.user} />
@@ -98,6 +113,26 @@ const Chat = () => {
               })
             }
           />
+        </Col>
+        <Col xs={8} style={{ padding: 0 }}>
+          <FormInput
+            label="Message"
+            value={state.content}
+            onChange={(e) =>
+              stateSet({
+                ...state,
+                content: e.target.value,
+              })
+            }
+            onKeyUp={(e) => {
+              if (e.keyCode === 13) {
+                onSend();
+              }
+            }}
+          />
+        </Col>
+        <Col xs={2} style={{ padding: 0 }}>
+          <Button onClick={() => onSend()}>Send ➡</Button>
         </Col>
       </Row>
     </Container>
