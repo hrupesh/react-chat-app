@@ -22,8 +22,21 @@ const GET_MESSAGES = gql`
   }
 `;
 
+const Messages = ({ user }) => {
+  const { data } = useQuery(GET_MESSAGES);
+  if (!data) {
+    return null;
+  }
+
+  return JSON.stringify(data);
+};
+
 const Chat = () => {
-  return <h6>This is a chat window</h6>;
+  return (
+    <h6>
+      <Messages user="Rupesh" />
+    </h6>
+  );
 };
 
 export default () => (
