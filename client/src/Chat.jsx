@@ -36,7 +36,7 @@ const Messages = ({ user }) => {
           style={{
             display: "flex",
             justifyContent: user === messageUser ? "flex-end" : "flex-start",
-            paddingBottom: "0em",
+            paddingBottom: "0.5em",
           }}
         >
           <div
