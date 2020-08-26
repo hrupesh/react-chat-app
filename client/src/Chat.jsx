@@ -48,7 +48,10 @@ const Messages = ({ user }) => {
                 border: "2px solid #e5e6ea",
                 borderRadius: 25,
                 textAlign: "center",
-                padding: "0.5em",
+                fontSize: "18px",
+                paddingTop: "0.6em",
+                textShadow: "0px 0px 4px #08080840",
+                boxShadow: "inset 0 0 20px #4a4a4a2e",
               }}
             >
               {messageUser.slice(0, 2).toUpperCase()}
