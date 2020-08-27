@@ -48,7 +48,10 @@ const Messages = ({ user }) => {
   return (
     <>
       {data.messages.length > 0 ? null : (
-        <h6 className="text-center">No Messages Yet!</h6>
+        <>
+          <h5 className="text-center">No Messages Yet!</h5>
+          <h6 className="text-center">Don't be shy, start by saying Hi!</h6>
+        </>
       )}
 
       {data.messages.map(({ id, user: messageUser, content }) => (
