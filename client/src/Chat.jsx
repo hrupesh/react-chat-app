@@ -114,7 +114,15 @@ const Chat = () => {
     });
   };
   return (
-    <Container className="mt-4 pb-4">
+    <Container
+      className="mt-4 pb-4"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        minHeight: "80vh",
+      }}
+    >
       <Messages user={state.user} />
       <Row className="px-4">
         <Col xs={2} style={{ padding: 0 }}>

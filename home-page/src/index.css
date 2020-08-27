@@ -4,7 +4,8 @@ body {
 }
 
 * {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s linear;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .cstm-nmrc {
