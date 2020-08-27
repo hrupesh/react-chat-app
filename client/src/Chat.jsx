@@ -48,7 +48,14 @@ const Messages = ({ user }) => {
   return (
     <>
       {data.messages.length > 0 ? null : (
-        <>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <img
             src="https://media.giphy.com/media/26BkMgeeCjES3B4FW/giphy.gif"
             height="200"
@@ -56,7 +63,7 @@ const Messages = ({ user }) => {
           />
           <h5 className="text-center">No Messages Yet!</h5>
           <h6 className="text-center">Don't be shy, start by saying Hi!</h6>
-        </>
+        </div>
       )}
 
       {data.messages.map(({ id, user: messageUser, content }) => (
