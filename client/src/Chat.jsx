@@ -49,6 +49,7 @@ const Messages = ({ user }) => {
     <>
       {data.messages.map(({ id, user: messageUser, content }) => (
         <div
+          key={id}
           style={{
             display: "flex",
             justifyContent: user === messageUser ? "flex-end" : "flex-start",
