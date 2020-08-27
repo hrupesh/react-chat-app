@@ -57,7 +57,7 @@ const Messages = ({ user }) => {
           }}
         >
           <img
-            src="https://media.giphy.com/media/26BkMgeeCjES3B4FW/giphy.gif"
+            src="https://media.giphy.com/media/26BkMgeeCjES3B4FW/giphy.gifd"
             height="200"
             width="200"
           />
