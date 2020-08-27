@@ -21,12 +21,12 @@ import Chat from "chat/Chat";
 
 const App = () => (
   <>
-    <Navbar type="dark" theme="primary" expand="md">
+    <Navbar type="dark" theme="secondary" expand="md">
       <NavbarBrand href="/">Chat Room</NavbarBrand>
       <NavbarToggler />
     </Navbar>
-    <Container>
-      <h1 className="display-3">Chat!</h1>
+    <Container className="my-4">
+      <h4>Start Chatting to Random Strangers</h4>
       <Chat />
     </Container>
   </>
