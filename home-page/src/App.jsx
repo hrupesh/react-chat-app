@@ -21,12 +21,28 @@ import Chat from "chat/Chat";
 
 const App = () => (
   <>
-    <Navbar type="dark" theme="secondary" expand="md">
-      <NavbarBrand href="/">Chat Room</NavbarBrand>
+    <Navbar type="dark" style={{ backgroundColor: "#512DF8" }} expand="md">
+      <NavbarBrand href="/" style={{ fontSize: "1.6rem" }}>
+        Cha
+        <span
+          style={{
+            color: "#000",
+            fontWeight: "900",
+            fontSize: "2rem",
+            top: "13px",
+            transform: "rotate3d(1, 0, 0, 180deg)",
+            display: "inline-block",
+            padding: "2px",
+          }}
+        >
+          T
+        </span>{" "}
+        Room
+      </NavbarBrand>
       <NavbarToggler />
     </Navbar>
     <Container className="my-4">
-      <h4>Start Chatting to Random Strangers</h4>
+      <h4 className="text-center">Start Chatting to Random Strangers</h4>
       <Chat />
     </Container>
   </>
