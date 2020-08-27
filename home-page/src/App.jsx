@@ -24,17 +24,7 @@ const App = () => (
     <Navbar type="dark" style={{ backgroundColor: "#512DF8" }} expand="md">
       <NavbarBrand href="/" style={{ fontSize: "1.6rem" }}>
         Cha
-        <span
-          style={{
-            color: "#000",
-            fontWeight: "900",
-            fontSize: "2rem",
-            transform: "rotate3d(1, 0, 0, 180deg)",
-            display: "inline-block",
-            padding: "2px",
-          }}
-          className="cool-T"
-        >
+        <span style={{}} className="cool-T">
           T
         </span>{" "}
         Room

@@ -3,15 +3,22 @@ body {
 }
 
 .cool-T {
-  animation: rotate-on-X 1s ease-in-out 0s infinite alternate none;
+  animation: rotate-on-X 2s linear 0s infinite;
+  text-shadow: 0 0 10px #ffffff3d;
+  color: #000;
+  font-weight: 900;
+  font-size: 2rem;
+  transform: rotate3d(1, 0, 0, 180deg);
+  display: inline-block;
+  padding: 2px;
 }
 
 @keyframes rotate-on-X {
   from {
-    transform: rotate3d(1, 0, 0, 180deg)
+    transform: rotate3d(1, 0, 0, 0deg)
   }
 
   to {
-    transform: rotate3d(1, 0, 0, 0deg)
+    transform: rotate3d(1, 0, 0, 360deg)
   }
 }
