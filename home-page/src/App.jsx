@@ -31,7 +31,7 @@ const App = () => (
       </NavbarBrand>
       <NavbarToggler />
     </Navbar>
-    <Container className="my-4 cstm-nmrc">
+    <Container className="cstm-nmrc">
       <h4 className="text-center">Start Chatting to Random Strangers</h4>
       <Chat />
     </Container>
