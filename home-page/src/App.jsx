@@ -5,9 +5,7 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
+  Fade,
 } from "shards-react";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,10 +34,12 @@ const App = () => (
       </NavbarBrand>
       <NavbarToggler />
     </Navbar>
-    <Container className="cstm-nmrc">
-      <h4 className="text-center">Start Chatting with Random Strangers</h4>
-      <Chat />
-    </Container>
+    <Fade in={true}>
+      <Container className="cstm-nmrc">
+        <h4 className="text-center">Start Chatting with Random Strangers</h4>
+        <Chat />
+      </Container>
+    </Fade>
   </>
 );
 
