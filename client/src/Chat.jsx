@@ -67,8 +67,9 @@ const Messages = ({ user }) => {
                 textAlign: "center",
                 fontSize: "18px",
                 paddingTop: "0.6em",
+                background: "#eee",
                 textShadow: "0px 0px 4px #08080840",
-                boxShadow: "inset 0 0 20px #4a4a4a2e",
+                boxShadow: "outset 0 0 20px #4a4a4a2e",
               }}
             >
               {messageUser.slice(0, 2).toUpperCase()}
