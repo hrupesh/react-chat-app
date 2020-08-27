@@ -47,6 +47,10 @@ const Messages = ({ user }) => {
 
   return (
     <>
+      {data.messages.length > 0 ? null : (
+        <h6 className="text-center">No Messages Yet!</h6>
+      )}
+
       {data.messages.map(({ id, user: messageUser, content }) => (
         <div
           key={id}
@@ -138,7 +142,7 @@ const Chat = () => {
             }
           />
         </Col>
-        <Col xs={8} style={{ padding: 0 }}>
+        <Col xs={8}>
           <FormInput
             label="Message"
             value={state.content}
