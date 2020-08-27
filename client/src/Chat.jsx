@@ -120,7 +120,7 @@ const Chat = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
-        minHeight: "80vh",
+        minHeight: "60vh",
       }}
     >
       <Messages user={state.user} />
