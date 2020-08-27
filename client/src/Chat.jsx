@@ -49,6 +49,11 @@ const Messages = ({ user }) => {
     <>
       {data.messages.length > 0 ? null : (
         <>
+          <img
+            src="https://media.giphy.com/media/26BkMgeeCjES3B4FW/giphy.gif"
+            height="200"
+            width="200"
+          />
           <h5 className="text-center">No Messages Yet!</h5>
           <h6 className="text-center">Don't be shy, start by saying Hi!</h6>
         </>
