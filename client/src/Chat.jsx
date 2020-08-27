@@ -67,7 +67,7 @@ const Messages = ({ user }) => {
                 textAlign: "center",
                 fontSize: "18px",
                 paddingTop: "0.6em",
-                background: "#eee",
+                background: "#fff",
                 textShadow: "0px 0px 4px #08080840",
                 boxShadow: "outset 0 0 20px #4a4a4a2e",
               }}
