@@ -4,9 +4,9 @@ body {
 
 .cool-T {
   animation: rotate-on-X 2s linear 0s infinite;
-  text-shadow: 0 0 10px #ffffff3d;
-  color: #000;
-  font-weight: 900;
+  /* text-shadow: 0 0 10px #ffffff3d; */
+  color: rgb(255, 255, 255);
+  font-weight: 400;
   font-size: 2rem;
   transform: rotate3d(1, 0, 0, 180deg);
   display: inline-block;
