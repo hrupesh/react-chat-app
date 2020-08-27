@@ -3,6 +3,10 @@ body {
   background-color: #e5e6ea;
 }
 
+* {
+  transition: all 0.5s ease-in-out;
+}
+
 .cstm-nmrc {
   background: linear-gradient(315deg, #cecfd3, #f5f6fa);
   box-shadow: -8px -8px 19px #cecfd3,
