@@ -29,11 +29,11 @@ const App = () => (
             color: "#000",
             fontWeight: "900",
             fontSize: "2rem",
-            top: "13px",
             transform: "rotate3d(1, 0, 0, 180deg)",
             display: "inline-block",
             padding: "2px",
           }}
+          className="cool-T"
         >
           T
         </span>{" "}

@@ -1,3 +1,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.cool-T {
+  animation: rotate-on-X 1s ease-in-out 0s infinite alternate none;
+}
+
+@keyframes rotate-on-X {
+  from {
+    transform: rotate3d(1, 0, 0, 180deg)
+  }
+
+  to {
+    transform: rotate3d(1, 0, 0, 0deg)
+  }
+}
