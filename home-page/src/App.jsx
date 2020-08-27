@@ -9,9 +9,18 @@ import "./index.css";
 
 const App = () => (
   <Container>
-    <p></p>
-
-    <p></p>
+    <p className="h6">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam itaque
+      excepturi vitae fuga? Beatae facilis illum quos ipsa, ea amet saepe
+      excepturi ducimus? Quam aliquam delectus a ab vitae laudantium.{" "}
+    </p>
+    <h1 className="display-3">Chat!</h1>
+    <h6 className="display-4">Chat window goes here....</h6>
+    <p className="h6">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae,
+      laudantium iusto quos optio odio nobis. Atque sequi, velit placeat
+      consectetur iste nemo dicta tempore amet. Non facere ut saepe nulla.{" "}
+    </p>
   </Container>
 );
 
