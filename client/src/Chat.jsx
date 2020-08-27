@@ -61,7 +61,7 @@ const Messages = ({ user }) => {
             height="200"
             width="200"
           />
-          <h5 className="text-center">No Messages Yet!</h5>
+          <h5 className="text-center mt-2 mb-1">No Messages Yet!</h5>
           <h6 className="text-center">Don't be shy, start by saying Hi!</h6>
         </div>
       )}
