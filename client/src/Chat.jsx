@@ -157,7 +157,7 @@ const Chat = () => {
         minHeight: "60vh",
       }}
     >
-      <Modal size="sm" open={true} toggle={null}>
+      <Modal size="lg" open={true} toggle={() => console.log("Toggling")}>
         <ModalHeader>Header</ModalHeader>
         <ModalBody>👋 Hello there!</ModalBody>
       </Modal>
