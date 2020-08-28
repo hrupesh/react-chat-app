@@ -148,7 +148,8 @@ const Chat = () => {
         <Col xs={2} style={{ padding: 0 }}>
           <FormInput
             label="User"
-            className="disabled"
+            disabled={true}
+            valid
             value={state.user}
             onChange={(e) =>
               stateSet({
