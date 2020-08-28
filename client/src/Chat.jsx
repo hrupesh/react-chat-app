@@ -124,7 +124,7 @@ const Chat = () => {
 
   useEffect(() => {
     alert("PageLoaded");
-  });
+  }, []);
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
