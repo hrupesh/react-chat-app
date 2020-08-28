@@ -144,7 +144,7 @@ const Chat = () => {
       }}
     >
       <Messages user={state.user} />
-      <Row className="px-4">
+      <Row className="px-3">
         <Col xs={2} style={{ padding: 0 }}>
           <FormInput
             label="User"
