@@ -57,7 +57,7 @@ const Messages = ({ user }) => {
           }}
         >
           <img
-            src="https://github.com/hrupesh/react-chat-app/blob/master/client/assets/no-message.png"
+            src="https://raw.githubusercontent.com/hrupesh/react-chat-app/master/client/assets/no-message.png"
             height="200"
             width="200"
           />
