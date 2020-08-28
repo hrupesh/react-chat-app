@@ -58,7 +58,7 @@ const Messages = ({ user }) => {
         >
           <img
             src="https://raw.githubusercontent.com/hrupesh/react-chat-app/master/client/assets/no-message.png"
-            height="200"
+            height="300"
           />
           <h5 className="text-center mt-2 mb-2" style={{ color: "#512DF8" }}>
             No Messages Yet!
