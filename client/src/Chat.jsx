@@ -8,7 +8,16 @@ import {
   gql,
 } from "@apollo/client";
 import { WebSocketLink } from "@apollo/client/link/ws";
-import { Container, Col, Row, FormInput, Button } from "shards-react";
+import {
+  Container,
+  Col,
+  Row,
+  FormInput,
+  Button,
+  Modal,
+  ModalBody,
+  ModalHeader,
+} from "shards-react";
 
 const link = new WebSocketLink({
   uri: "ws://localhost:4000/",
@@ -148,13 +157,17 @@ const Chat = () => {
         minHeight: "60vh",
       }}
     >
+      <Modal size="sm" open={true} toggle={null}>
+        <ModalHeader>Header</ModalHeader>
+        <ModalBody>👋 Hello there!</ModalBody>
+      </Modal>
       <Messages user={state.user} />
       <Row className="px-3">
         <Col xs={2} style={{ padding: 0 }}>
           <FormInput
             label="User"
             disabled={true}
-            // valid
+            valid
             value={state.user}
             onChange={(e) =>
               stateSet({
