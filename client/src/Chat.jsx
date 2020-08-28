@@ -121,6 +121,11 @@ const Chat = () => {
     user: "Rupesh",
     content: "",
   });
+
+  useEffect(() => {
+    alert("PageLoaded");
+  });
+
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
     if (state.content.length > 0) {
