@@ -149,6 +149,7 @@ const Chat = () => {
           <FormInput
             label="User"
             disabled={true}
+            // valid
             value={state.user}
             onChange={(e) =>
               stateSet({
