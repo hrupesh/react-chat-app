@@ -157,9 +157,26 @@ const Chat = () => {
         minHeight: "60vh",
       }}
     >
-      <Modal size="lg" open={true} toggle={() => console.log("Toggling")}>
-        <ModalHeader>Header</ModalHeader>
-        <ModalBody>👋 Hello there!</ModalBody>
+      <Modal
+        size="lg"
+        open={true}
+        toggle={() => console.log("Toggling")}
+        center
+      >
+        <ModalHeader>Enter your display Name</ModalHeader>
+        <ModalBody>
+          <FormInput
+            label="User"
+            value={state.user}
+            onChange={(e) =>
+              stateSet({
+                ...state,
+                user: e.target.value,
+              })
+            }
+          />
+          <Button>Save</Button>
+        </ModalBody>
       </Modal>
       <Messages user={state.user} />
       <Row className="px-3">
