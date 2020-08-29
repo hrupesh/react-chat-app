@@ -127,8 +127,9 @@ const Messages = ({ user }) => {
 
 const Chat = () => {
   const [state, stateSet] = React.useState({
-    user: "Rupesh",
+    user: "",
     content: "",
+    dialog: true,
   });
 
   useEffect(() => {
@@ -147,6 +148,13 @@ const Chat = () => {
       content: "",
     });
   };
+
+  const hideDialog = () => {
+    stateSet({
+      ...state,
+      dialog: false,
+    });
+  };
   return (
     <Container
       className="mt-4 pb-4"
@@ -159,7 +167,7 @@ const Chat = () => {
     >
       <Modal
         size="lg"
-        open={true}
+        open={state.dialog}
         toggle={() => console.log("Toggling")}
         center
       >
@@ -176,10 +184,17 @@ const Chat = () => {
                     user: e.target.value,
                   })
                 }
+                onKeyUp={(e) => {
+                  if (e.keyCode === 13) {
+                    hideDialog;
+                  }
+                }}
               />
             </Col>
             <Col>
-              <Button>Save</Button>
+              <Button block onClick={hideDialog}>
+                Save
+              </Button>
             </Col>
           </Row>
         </ModalBody>
