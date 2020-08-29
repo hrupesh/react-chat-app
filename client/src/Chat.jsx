@@ -172,11 +172,12 @@ const Chat = () => {
         centered={true}
         backdrop={true}
       >
-        <ModalHeader>Enter your display Name</ModalHeader>
+        <ModalHeader>What should you be called?</ModalHeader>
         <ModalBody>
           <Row>
             <Col xs={8}>
               <FormInput
+                style={{ borderRadius: 0 }}
                 label="User"
                 value={state.user}
                 onChange={(e) =>
@@ -193,7 +194,7 @@ const Chat = () => {
               />
             </Col>
             <Col>
-              <Button block theme="success" onClick={hideDialog}>
+              <Button block squared theme="success" onClick={hideDialog}>
                 Save
               </Button>
             </Col>
