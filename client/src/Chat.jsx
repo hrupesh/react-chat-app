@@ -192,7 +192,7 @@ const Chat = () => {
               />
             </Col>
             <Col>
-              <Button block onClick={hideDialog}>
+              <Button block squared theme="success" onClick={hideDialog}>
                 Save
               </Button>
             </Col>
