@@ -165,17 +165,23 @@ const Chat = () => {
       >
         <ModalHeader>Enter your display Name</ModalHeader>
         <ModalBody>
-          <FormInput
-            label="User"
-            value={state.user}
-            onChange={(e) =>
-              stateSet({
-                ...state,
-                user: e.target.value,
-              })
-            }
-          />
-          <Button>Save</Button>
+          <Row>
+            <Col>
+              <FormInput
+                label="User"
+                value={state.user}
+                onChange={(e) =>
+                  stateSet({
+                    ...state,
+                    user: e.target.value,
+                  })
+                }
+              />
+            </Col>
+            <Col>
+              <Button>Save</Button>
+            </Col>
+          </Row>
         </ModalBody>
       </Modal>
       <Messages user={state.user} />
