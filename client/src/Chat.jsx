@@ -184,7 +184,7 @@ const Chat = () => {
         <ModalHeader>What should you be called?</ModalHeader>
         <ModalBody>
           <Row>
-            <Col xs={10}>
+            <Col xs={8}>
               <FormInput
                 style={{ borderRadius: 0 }}
                 label="User"
