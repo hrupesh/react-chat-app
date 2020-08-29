@@ -166,7 +166,7 @@ const Chat = () => {
         <ModalHeader>Enter your display Name</ModalHeader>
         <ModalBody>
           <Row>
-            <Col>
+            <Col xs={8}>
               <FormInput
                 label="User"
                 value={state.user}
