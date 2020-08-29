@@ -15,3 +15,18 @@ body {
   box-sizing: border-box;
   /* font-family: Arial, Helvetica, sans-serif; */
 }
+
+.cool-img {
+  animation: cool-img-animation 1s linear 0s infinite alternate none;
+  color: aliceblue;
+}
+
+@keyframes cool-img-animation {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}

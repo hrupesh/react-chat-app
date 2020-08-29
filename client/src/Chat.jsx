@@ -69,8 +69,9 @@ const Messages = ({ user }) => {
           <img
             src="https://raw.githubusercontent.com/hrupesh/react-chat-app/master/client/assets/no-message.png"
             height="300"
+            className="cool-img"
           />
-          <h4 className="text-center mt-2 mb-2" style={{ color: "#512DF8" }}>
+          <h4 className="text-center mt-2 mb-2" style={{ color: "#ee66b2" }}>
             No Messages Yet!
           </h4>
           <h6 className="text-center">Don't be shy, start by saying Hi!</h6>

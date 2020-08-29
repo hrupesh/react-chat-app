@@ -41,3 +41,18 @@ body {
     transform: rotate3d(1, 0, 0, 360deg)
   }
 }
+
+.cool-img {
+  animation: cool-img-animation 1s linear 0s infinite alternate none;
+  color: aliceblue;
+}
+
+@keyframes cool-img-animation {
+  from {
+    transform: scale(1) rotateY(0deg)
+  }
+
+  to {
+    transform: scale(1.01) rotateY(360deg)
+  }
+}
