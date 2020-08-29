@@ -17,6 +17,7 @@ import {
   Modal,
   ModalBody,
   ModalHeader,
+  Alert,
 } from "shards-react";
 
 const link = new WebSocketLink({
@@ -151,7 +152,7 @@ const Chat = () => {
   };
 
   const hideDialog = () => {
-    if (!state.user > 2) {
+    if (state.user.length < 2) {
       stateSet({
         ...state,
         error: "Username must be atleast 2 characters",
@@ -183,7 +184,7 @@ const Chat = () => {
         <ModalHeader>What should you be called?</ModalHeader>
         <ModalBody>
           <Row>
-            <Col xs={8}>
+            <Col xs={10}>
               <FormInput
                 style={{ borderRadius: 0 }}
                 label="User"
@@ -200,7 +201,7 @@ const Chat = () => {
                   }
                 }}
               />
-              {state.error ? <div> {state.error} </div> : null}
+              {state.error ? <Alert theme="danger">{state.error}</Alert> : null}
             </Col>
             <Col>
               <Button block squared theme="success" onClick={hideDialog}>
