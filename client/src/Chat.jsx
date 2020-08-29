@@ -196,7 +196,7 @@ const Chat = () => {
                 }
                 onKeyUp={(e) => {
                   if (e.keyCode === 13) {
-                    hideDialog;
+                    hideDialog();
                   }
                 }}
               />
