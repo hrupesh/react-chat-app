@@ -130,6 +130,7 @@ const Chat = () => {
     user: "",
     content: "",
     dialog: true,
+    error: "",
   });
 
   // useEffect(() => {
@@ -150,10 +151,17 @@ const Chat = () => {
   };
 
   const hideDialog = () => {
-    stateSet({
-      ...state,
-      dialog: false,
-    });
+    if (!state.user > 2) {
+      stateSet({
+        ...state,
+        error: "Username must be atleast 2 characters",
+      });
+    } else {
+      stateSet({
+        ...state,
+        dialog: false,
+      });
+    }
   };
   return (
     <Container
@@ -192,6 +200,7 @@ const Chat = () => {
                   }
                 }}
               />
+              {state.error ? <div> {state.error} </div> : null}
             </Col>
             <Col>
               <Button block squared theme="success" onClick={hideDialog}>
