@@ -9,7 +9,7 @@ body {
 }
 
 .modal-backdrop.show {
-  opacity: 0.99;
+  opacity: 1;
 }
 
 .cstm-nmrc {
@@ -43,16 +43,16 @@ body {
 }
 
 .cool-img {
-  animation: cool-img-animation 1s linear 0s infinite alternate none;
+  animation: cool-img-animation 4s linear 0s infinite alternate none;
   color: aliceblue;
 }
 
 @keyframes cool-img-animation {
   from {
-    transform: scale(1) rotateY(0deg)
+    transform: scale(1) rotateY(0deg);
   }
 
   to {
-    transform: scale(1.01) rotateY(360deg)
+    transform: scale(2) rotateY(360deg);
   }
 }
