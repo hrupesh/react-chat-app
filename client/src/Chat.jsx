@@ -201,7 +201,11 @@ const Chat = () => {
                   }
                 }}
               />
-              {state.error ? <Alert theme="danger">{state.error}</Alert> : null}
+              {state.error ? (
+                <Alert theme="danger" fade={true}>
+                  {state.error}
+                </Alert>
+              ) : null}
             </Col>
             <Col>
               <Button block squared theme="success" onClick={hideDialog}>
