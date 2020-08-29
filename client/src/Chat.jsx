@@ -132,9 +132,9 @@ const Chat = () => {
     dialog: true,
   });
 
-  useEffect(() => {
-    alert("PageLoaded");
-  }, []);
+  // useEffect(() => {
+  //   alert("PageLoaded");
+  // }, []);
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
@@ -169,7 +169,8 @@ const Chat = () => {
         size="lg"
         open={state.dialog}
         toggle={() => console.log("Toggling")}
-        center
+        centered={true}
+        backdrop={true}
       >
         <ModalHeader>Enter your display Name</ModalHeader>
         <ModalBody>
@@ -192,7 +193,7 @@ const Chat = () => {
               />
             </Col>
             <Col>
-              <Button block squared theme="success" onClick={hideDialog}>
+              <Button block theme="success" onClick={hideDialog}>
                 Save
               </Button>
             </Col>
