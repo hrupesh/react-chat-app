@@ -81,7 +81,14 @@ const Messages = ({ user }) => {
           <h6 className="text-center">Don't be shy, start by saying Hi!</h6>
         </div>
       )}
-      <div style={{ maxHeight: "60vh", minHeight: "60vh", overflowY: "auto" }}>
+      <div
+        style={{
+          maxHeight: "60vh",
+          minHeight: "60vh",
+          overflowY: "auto",
+          paddingRight: "5px",
+        }}
+      >
         {data.messages.map(({ id, user: messageUser, content }) => (
           <div
             key={id}

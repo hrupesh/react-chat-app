@@ -73,14 +73,14 @@ body {
 ::-webkit-scrollbar {
   width: 4px;
   border-radius: 15px;
-  margin: 0 4px;
+  /* margin: 0 4px; */
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background-color: #e5e6ea;
+  /* outline: 1px solid slategrey; */
 }
