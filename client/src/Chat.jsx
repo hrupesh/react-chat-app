@@ -18,6 +18,10 @@ import {
   ModalBody,
   ModalHeader,
   Alert,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Fade,
 } from "shards-react";
 
 const link = new WebSocketLink({
