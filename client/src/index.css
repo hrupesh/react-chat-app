@@ -16,17 +16,47 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+.cstm-nmrc {
+  background: linear-gradient(315deg, #cecfd3, #f5f6fa);
+  box-shadow: -8px -8px 19px #cecfd3,
+    8px 8px 19px #fcfdff;
+  border-radius: 15px;
+  padding-top: 2rem;
+  margin: 4rem auto;
+}
+
+.cool-T {
+  animation: rotate-on-X 2s linear 0s infinite;
+  /* text-shadow: 0 0 10px #ffffff3d; */
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 2rem;
+  transform: rotate3d(1, 0, 0, 180deg);
+  display: inline-block;
+  padding: 2px;
+}
+
+@keyframes rotate-on-X {
+  from {
+    transform: rotate3d(1, 0, 0, 0deg)
+  }
+
+  to {
+    transform: rotate3d(1, 0, 0, 360deg)
+  }
+}
+
 .cool-img {
-  animation: cool-img-animation 1s linear 0s infinite alternate none;
+  animation: cool-img-animation 6s linear 0s infinite alternate none;
   color: aliceblue;
 }
 
 @keyframes cool-img-animation {
   from {
-    transform: scale(1);
+    transform: scale(0.8) rotateY(0deg);
   }
 
   to {
-    transform: scale(1.1);
+    transform: scale(1) rotateY(360deg);
   }
 }

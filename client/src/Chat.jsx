@@ -160,7 +160,7 @@ const Chat = () => {
     if (state.user.length < 2) {
       stateSet({
         ...state,
-        error: "Username must be atleast 2 characters",
+        error: "Your name must have atleast 2 characters , use them here 😅",
       });
     } else {
       stateSet({
