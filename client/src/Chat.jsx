@@ -60,12 +60,12 @@ const Messages = ({ user }) => {
     return null;
   }
 
-  useEffect(() => {
-    // alert("PageLoaded");
-    animateScroll.scrollToBottom({
-      containerId: "messages-container",
-    });
-  });
+  // useEffect(() => {
+  //   // alert("PageLoaded");
+  //   animateScroll.scrollToBottom({
+  //     containerId: "messages-container",
+  //   });
+  // }, [data]);
 
   return (
     <>
@@ -156,12 +156,12 @@ const Chat = () => {
     error: "",
   });
 
-  // useEffect(() => {
-  //   // alert("PageLoaded");
-  //   animateScroll.scrollToBottom({
-  //     containerId: "messages-container",
-  //   });
-  // });
+  useEffect(() => {
+    // alert("PageLoaded");
+    animateScroll.scrollToBottom({
+      containerId: "messages-container",
+    });
+  });
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
