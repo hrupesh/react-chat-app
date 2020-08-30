@@ -86,7 +86,7 @@ const Messages = ({ user }) => {
           maxHeight: "60vh",
           minHeight: "60vh",
           overflowY: "auto",
-          paddingRight: "5px",
+          paddingRight: "10px",
         }}
       >
         {data.messages.map(({ id, user: messageUser, content }) => (
