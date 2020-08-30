@@ -84,3 +84,7 @@ body {
   background-color: #00000026;
   /* outline: 1px solid slategrey; */
 }
+
+.navbar-toggler {
+  display: none;
+}

@@ -325,5 +325,18 @@ export default () => (
         <Chat />
       </Container>
     </Fade>
+    <Navbar
+      type="dark"
+      style={{
+        backgroundColor: "#512DF8",
+        padding: "0 1.5rem",
+        justifyContent: "center",
+      }}
+    >
+      <NavbarBrand style={{ textAlign: "center" }}>
+        Made with 💕 by Rupesh Chaudhari
+      </NavbarBrand>
+      <NavbarToggler />
+    </Navbar>
   </ApolloProvider>
 );
