@@ -23,6 +23,7 @@ import {
   NavbarBrand,
   Fade,
 } from "shards-react";
+import { animateScroll } from "react-scroll";
 
 const link = new WebSocketLink({
   uri: "ws://localhost:4000/",
@@ -82,6 +83,7 @@ const Messages = ({ user }) => {
         </div>
       )}
       <div
+        id="messages-container"
         style={{
           maxHeight: "60vh",
           minHeight: "60vh",
@@ -147,9 +149,12 @@ const Chat = () => {
     error: "",
   });
 
-  // useEffect(() => {
-  //   alert("PageLoaded");
-  // }, []);
+  useEffect(() => {
+    // alert("PageLoaded");
+    animateScroll.scrollToBottom({
+      containerId: "messages-container",
+    });
+  }, []);
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
