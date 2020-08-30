@@ -154,7 +154,7 @@ const Chat = () => {
     animateScroll.scrollToBottom({
       containerId: "messages-container",
     });
-  }, []);
+  });
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
