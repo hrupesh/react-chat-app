@@ -248,7 +248,7 @@ const Chat = () => {
       </Modal>
       <Messages user={state.user} />
       <Row className="px-3">
-        <Col xs={2} style={{ padding: 0 }}>
+        <Col xs={4} md={2} style={{ padding: 0 }}>
           <FormInput
             label="User"
             disabled={true}
@@ -262,7 +262,7 @@ const Chat = () => {
             }
           />
         </Col>
-        <Col xs={8}>
+        <Col xs={6} md={8}>
           <FormInput
             label="Message"
             value={state.content}
@@ -280,7 +280,8 @@ const Chat = () => {
           />
         </Col>
         <Col
-          xs={2}
+          xs={4}
+          md={2}
           style={{
             padding: 0,
           }}

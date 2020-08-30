@@ -34,6 +34,13 @@ body {
   margin: 4rem auto;
 }
 
+@media (max-width:450px) {
+  .cstm-nmrc {
+    margin: 4rem 1.25rem;
+    max-width: 90vw;
+  }
+}
+
 .cool-T {
   animation: rotate-on-X 2s linear 0s infinite;
   /* text-shadow: 0 0 10px #ffffff3d; */
