@@ -26,7 +26,7 @@ import {
 import { animateScroll } from "react-scroll";
 
 const link = new WebSocketLink({
-  uri: "ws://localhost:4000/",
+  uri: "ws://chat-app-yoga-server.herokuapp.com//",
   options: {
     reconnect: true,
   },
@@ -34,7 +34,7 @@ const link = new WebSocketLink({
 
 const client = new ApolloClient({
   link,
-  uri: "http://localhost:4000/",
+  uri: "https://chat-app-yoga-server.herokuapp.com/",
   cache: new InMemoryCache(),
 });
 
@@ -334,7 +334,11 @@ export default () => (
       }}
     >
       <NavbarBrand style={{ textAlign: "center" }}>
-        Made with 💕 by Rupesh Chaudhari
+        Made with 💕 by{" "}
+        <a href="https://rupesh.cf/" className="text-white" target="__blank__">
+          {" "}
+          Rupesh Chaudhari{" "}
+        </a>
       </NavbarBrand>
       <NavbarToggler />
     </Navbar>
