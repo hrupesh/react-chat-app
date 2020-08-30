@@ -5,6 +5,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-color: #e5e6ea;
+}
+
 .modal-backdrop.show {
   opacity: 1;
 }
