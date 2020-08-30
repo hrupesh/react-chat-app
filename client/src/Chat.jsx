@@ -26,7 +26,7 @@ import {
 import { animateScroll } from "react-scroll";
 
 const link = new WebSocketLink({
-  uri: "ws://chat-app-yoga-server.herokuapp.com/",
+  uri: "wss://chat-app-yoga-server.herokuapp.com/",
   options: {
     reconnect: true,
   },
