@@ -169,6 +169,13 @@ const Chat = () => {
       });
     }
   };
+
+  const handleToggle = () => {
+    stateSet({
+      ...state,
+      error: "Provide a name before proceeding!",
+    });
+  };
   return (
     <Container
       className="mt-4 pb-4"
@@ -182,7 +189,7 @@ const Chat = () => {
       <Modal
         size="lg"
         open={state.dialog}
-        toggle={() => console.log("Toggling")}
+        toggle={() => handleToggle()}
         centered={true}
         backdrop={true}
       >
