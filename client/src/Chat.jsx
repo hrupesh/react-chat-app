@@ -156,18 +156,19 @@ const Chat = () => {
     error: "",
   });
 
-  // useEffect(() => {
-  //   // alert("PageLoaded");
-  //   animateScroll.scrollToBottom({
-  //     containerId: "messages-container",
-  //   });
-  // });
+  useEffect(() => {
+    // alert("PageLoaded");
+    animateScroll.scrollToBottom({
+      containerId: "messages-container",
+    });
+  });
 
   setInterval(() => {
     animateScroll.scrollToBottom({
       containerId: "messages-container",
     });
-  }, 1000);
+    // console.log("Scrolling");
+  }, 5000);
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
