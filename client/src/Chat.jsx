@@ -60,6 +60,13 @@ const Messages = ({ user }) => {
     return null;
   }
 
+  useEffect(() => {
+    // alert("PageLoaded");
+    animateScroll.scrollToBottom({
+      containerId: "messages-container",
+    });
+  });
+
   return (
     <>
       {data.messages.length > 0 ? null : (
