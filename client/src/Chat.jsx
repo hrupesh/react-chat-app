@@ -248,7 +248,7 @@ const Chat = () => {
       </Modal>
       <Messages user={state.user} />
       <Row className="px-3">
-        <Col xs={4} md={2} style={{ padding: 0 }}>
+        <Col xs={3} md={2} style={{ padding: 0 }}>
           <FormInput
             label="User"
             disabled={true}
@@ -280,7 +280,7 @@ const Chat = () => {
           />
         </Col>
         <Col
-          xs={4}
+          xs={3}
           md={2}
           style={{
             padding: 0,
@@ -292,7 +292,7 @@ const Chat = () => {
             style={{ backgroundColor: "512DF8", border: 0 }}
             onClick={() => onSend()}
           >
-            Send ➡
+            Send
           </Button>
         </Col>
       </Row>
