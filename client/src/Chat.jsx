@@ -271,6 +271,21 @@ const Chat = () => {
 
 export default () => (
   <ApolloProvider client={client}>
-    <Chat />
+    <Navbar type="dark" style={{ backgroundColor: "#512DF8" }} expand="md">
+      <NavbarBrand href="/" style={{ fontSize: "1.6rem", padding: 0 }}>
+        Cha
+        <span style={{}} className="cool-T">
+          T
+        </span>{" "}
+        Room
+      </NavbarBrand>
+      <NavbarToggler />
+    </Navbar>
+    <Fade in={true}>
+      <Container className="cstm-nmrc">
+        <h4 className="text-center">Start Chatting with Random Strangers</h4>
+        <Chat />
+      </Container>
+    </Fade>
   </ApolloProvider>
 );
