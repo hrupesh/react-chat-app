@@ -9,6 +9,11 @@ body {
   background-color: #e5e6ea;
 }
 
+.alert-danger {
+  color: #fff;
+  background-color: #F44336;
+}
+
 .modal-backdrop.show {
   opacity: 1;
 }
