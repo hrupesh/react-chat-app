@@ -81,52 +81,53 @@ const Messages = ({ user }) => {
           <h6 className="text-center">Don't be shy, start by saying Hi!</h6>
         </div>
       )}
-
-      {data.messages.map(({ id, user: messageUser, content }) => (
-        <div
-          key={id}
-          style={{
-            display: "flex",
-            justifyContent: user === messageUser ? "flex-end" : "flex-start",
-            paddingBottom: "0.5em",
-          }}
-        >
-          {user !== messageUser && (
-            <div
-              style={{
-                height: 50,
-                width: 50,
-                marginRight: "0.5em",
-                border: "2px solid #ddd",
-                borderRadius: 25,
-                textAlign: "center",
-                fontSize: "18px",
-                paddingTop: "0.6em",
-                background: "#fff",
-                textShadow: "0px 0px 4px #08080840",
-                boxShadow: "inset 0 0 20px #4a4a4a2e",
-              }}
-            >
-              {messageUser.slice(0, 2).toUpperCase()}
-            </div>
-          )}
+      <div style={{ maxHeight: "60vh", minHeight: "60vh", overflowY: "auto" }}>
+        {data.messages.map(({ id, user: messageUser, content }) => (
           <div
+            key={id}
             style={{
-              background: user === messageUser ? "#512DF8" : "#e5e6ea",
-              color: user === messageUser ? "white" : "black",
-              letterSpacing: 2,
-              fontWeight: "400",
-              padding: "1em 1.5em",
-              borderRadius: "1em",
-              maxWidth: "60%",
-              boxShadow: "inset 0px 0 8px 0px #0000002b",
-              //   boxShadow: "-26px -26px 63px #4596c5, 26px 26px 63px #65dcff",
+              display: "flex",
+              justifyContent: user === messageUser ? "flex-end" : "flex-start",
+              paddingBottom: "0.5em",
             }}
           >
-            {content}
+            {user !== messageUser && (
+              <div
+                style={{
+                  height: 50,
+                  width: 50,
+                  marginRight: "0.5em",
+                  border: "2px solid #ddd",
+                  borderRadius: 25,
+                  textAlign: "center",
+                  fontSize: "18px",
+                  paddingTop: "0.6em",
+                  background: "#fff",
+                  textShadow: "0px 0px 4px #08080840",
+                  boxShadow: "inset 0 0 20px #4a4a4a2e",
+                }}
+              >
+                {messageUser.slice(0, 2).toUpperCase()}
+              </div>
+            )}
+            <div
+              style={{
+                background: user === messageUser ? "#512DF8" : "#e5e6ea",
+                color: user === messageUser ? "white" : "black",
+                letterSpacing: 2,
+                fontWeight: "400",
+                padding: "1em 1.5em",
+                borderRadius: "1em",
+                maxWidth: "60%",
+                boxShadow: "inset 0px 0 8px 0px #0000002b",
+                //   boxShadow: "-26px -26px 63px #4596c5, 26px 26px 63px #65dcff",
+              }}
+            >
+              {content}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };
