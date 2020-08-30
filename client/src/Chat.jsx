@@ -93,7 +93,6 @@ const Messages = ({ user }) => {
         id="messages-container"
         style={{
           maxHeight: "60vh",
-          minHeight: "60vh",
           overflowY: "auto",
           paddingRight: "10px",
         }}
@@ -162,13 +161,6 @@ const Chat = () => {
       containerId: "messages-container",
     });
   });
-
-  setInterval(() => {
-    animateScroll.scrollToBottom({
-      containerId: "messages-container",
-    });
-    // console.log("Scrolling");
-  }, 5000);
 
   const [postMessage] = useMutation(POST_MESSAGE);
   const onSend = () => {
@@ -306,6 +298,14 @@ const Chat = () => {
     </Container>
   );
 };
+
+setInterval(() => {
+  animateScroll.scrollToBottom({
+    containerId: "messages-container",
+  });
+
+  // console.log("Scrolling");
+}, 2000);
 
 export default () => (
   <ApolloProvider client={client}>
