@@ -304,7 +304,6 @@ setInterval(() => {
   animateScroll.scrollToBottom({
     containerId: "messages-container",
   });
-
   // console.log("Scrolling");
 }, 2000);
 
